@@ -1,0 +1,10 @@
+# AULA 09 - ESTRUTURA DE REPETIÇÃO - WHILE  
+
+conte = 1
+
+
+while conte <= 10 
+    
+    puts conte
+    conte = conte + 1
+end
