@@ -1,0 +1,19 @@
+# AULA 04------------------ COMANDO DE ENTRADA --------------------
+
+
+puts "Digite seu nome: "
+nome2 = gets.chomp             #ENTRADA TIPO STRING
+
+puts "Qual a sua idade: "
+idade2 = gets.chomp.to_i       #ENTRADA TIPO INTEIRO
+
+puts "Digite sua altura: "
+altura2 = gets.chomp.to_f      #ENTRADA TIPO FLOAT
+
+puts "Digite seu contato: "
+contato2 = gets.chomp          #ENTRADA TIPO STRING
+
+puts nome2
+puts idade2
+puts altura2
+puts contato2
