@@ -1,0 +1,23 @@
+semana = 6
+
+# ------------------ ESTRUTURA DE DECISÃO ELSIF ---------------------
+
+
+if semana == 1 
+    
+    puts "Domingo"
+elsif semana == 2  
+    puts "Segunda-feira"
+elsif semana == 3  
+    puts "Terça-feira"
+elsif semana == 4  
+    puts "Quarta-feira"
+elsif semana == 5  
+    puts "Quinta-feira"
+elsif semana == 6  
+    puts "Sexta-feira"
+elsif semana == 7  
+    puts "Sábado-feira"
+else
+    puts "Não existe esta semana."
+end
