@@ -1,0 +1,15 @@
+# AULA 04------------------ OPERADORES MATEMÁTICOS ---------------
+
+adicao = 10 + 10
+subtracao = 90 - 30
+multiplicacao = 4 * 25
+divisao = 150 / 30
+potencia = 10 ** 3
+restoDivisao = 5 % 2
+
+puts adicao
+puts subtracao
+puts multiplicacao
+puts divisao
+puts potencia
+puts restoDivisao
