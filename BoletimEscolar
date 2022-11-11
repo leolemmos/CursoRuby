@@ -1,0 +1,29 @@
+puts "-------------------------------------------------------------"
+puts "                     BOLETIM ESCOLAR                         "                     
+puts "-------------------------------------------------------------"
+puts "Digite o nome aluno(a):"
+nome = gets.chomp
+
+puts "Digite nota 01: "
+nota1 = gets.chomp.to_f
+
+puts "Digite nota 02: "
+nota2 = gets.chomp.to_f
+
+puts "Digite nota 03: "
+nota3 = gets.chomp.to_f
+
+puts "Digite nota 04: "
+nota4 = gets.chomp.to_f
+
+media = (nota1 + nota2 + nota3 + nota4) /4
+
+puts "-------------------------------------------------------------"
+puts "                     BOLETIM ESCOLAR                         "                     
+puts "-------------------------------------------------------------"
+puts "Nome: #{nome}"
+puts "Nota 01: #{nota1}"
+puts "Nota 02: #{nota2}"
+puts "Nota 03: #{nota3}"
+puts "Nota 04: #{nota4}"
+puts "Média: #{media}"
