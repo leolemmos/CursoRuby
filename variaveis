@@ -1,0 +1,14 @@
+# AULA 02--------------------VARIÁVEIS -------------------------
+
+
+nome = "Leonardo"
+idade = 40
+altura = 1.73
+casado = true
+email = "leo@gmail.com"
+
+puts nome
+puts idade
+puts altura
+puts casado
+puts email
