@@ -1,0 +1,12 @@
+# AULA 05 - ESTRURA DE DECISÃO IF ELSE
+
+media = 8.5
+
+if media >= 7.0 
+    
+    puts "Aprovado"
+    
+else
+    puts "Reprovado"
+    
+end
