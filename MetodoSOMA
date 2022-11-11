@@ -1,0 +1,12 @@
+# AULA 12 --------------------- MÉTODO SOMA---------------------------------
+
+    def soma (n1, n2, n3)
+    
+    n1 + n2 +n3
+    
+    end   
+
+
+         calculandoSoma = soma( 10, 20, 30)
+
+         puts calculandoSoma
