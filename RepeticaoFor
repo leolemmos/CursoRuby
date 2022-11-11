@@ -1,0 +1,20 @@
+# AULA 09 - ESTRUTURA DE REPETIÇÃO - FOR
+
+frutas =['Banana','Maçã','Morango','Uva']
+
+for fruta in frutas
+    
+    puts fruta 
+    
+end
+
+
+# EXERCÍCIO 02
+
+nomes = ['Leonardo','Pedro','Maria','Ronaldo','Aline']
+
+for nome in nomes
+    
+    puts nome   
+    
+end
