@@ -1,0 +1,40 @@
+#AULA 14 ---------------------- ARRAY -------------------------------
+
+
+#ARRAY 01
+
+
+produtos = ["teclado","mouse","monitor","estabilizador","pendriver"]
+
+puts produtos
+
+#ARRAY 02
+
+cadastro =["Leonardo",40, 1.73,"Programador","Rua da Alegria", "Barra do Ceará"]
+puts cadastro
+
+
+#ARRAY 03
+
+clientes = []
+
+clientes.push("Leonardo","Aline","Layane","Lael")
+puts clientes
+
+
+#ARRAY 04 - ADICIONANDO VARIÁVEL NO VETOR
+
+clientes << "Pedro"
+
+puts clientes
+
+#ARRAY 05 - ADICIONANDO VARIÁVEL NO VETOR EM POSIÇÃO
+
+clientes.insert(0,"Conceição")
+puts clientes
+
+
+#ARRAY 06 - DELETANDO VARIÁVEL NO VETOR 
+
+clientes.delete("Leonardo")
+puts clientes
