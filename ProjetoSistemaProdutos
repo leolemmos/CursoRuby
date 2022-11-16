@@ -1,0 +1,135 @@
+# PROJETO SISTEMA DE CADASTRO DE PRODUTOS
+
+def home
+    
+    puts "#----------------------------------------------------------------#"
+    puts "|                                                                |"
+    puts "|                                                                |"
+    puts "|                                                                |"
+    puts "|                           BRASIL                               |"
+    puts "|                      PRODUTOS  LTDA.                           |"
+    puts "|                                                                |"
+    puts "|                                                                |"
+    puts "|                                                                |"
+    puts "#----------------------------------------------------------------#"
+
+end
+
+
+def login
+    
+    
+    puts "#----------------------------------------------------------------#"
+    puts "|                      LOGIN  DE ACESSO                          |"
+    puts "#----------------------------------------------------------------#"
+    puts "|Digite seu login:                                               |"
+    puts "#----------------------------------------------------------------#"
+    login = gets.chomp 
+    
+    puts "#----------------------------------------------------------------#"
+    puts "| Digite a sua senha:                                            |"
+    puts "#----------------------------------------------------------------#"
+    senha = gets.chomp
+    
+    
+    if login == "adm" && senha == "123"
+        
+        menu()
+        
+    else 
+        puts "Acesso Negado! Login ou senha errado."
+        
+    end
+    
+    puts "----------------------------------------------------------------"
+    
+    
+end
+  
+    
+def menu
+    
+    produtos = ["Teclado","Mouse","Monitor","Pendriver","Estabilizador","Caixa de Som"]
+    novoProduto =" "
+    excluirProduto =" "
+    
+    repeticao = 1 
+    
+    while repeticao <= 40
+        
+    
+    puts "#----------------------------------------------------------------#"
+    puts "|                     SISTEMA DE PRODUTOS                        |"
+    puts "#----------------------------------------------------------------#"
+    puts "|                                                                |"
+    puts "|                  [01] CADASTRAR PRODUTOS                       |"
+    puts "|                  [02] LISTAR TODOS OS PRODUTOS                 |"
+    puts "|                  [03] EXCLUIR PRODUTO                          |"
+    puts "|                  [04] SAIR DO SISTEMA                          |"
+    puts "|                                                                |"
+    puts "#----------------------------------------------------------------#"
+    puts "|    Digite a  Opção:                                            |"
+    puts "#----------------------------------------------------------------#"
+    opcao = gets.chomp
+    
+    if opcao == "1" 
+    
+   
+    puts "#----------------------------------------------------------------#"
+    puts "|                      CADASTRO DE PRODUTOS                      |"
+    puts "#----------------------------------------------------------------#"
+    puts "|Digite para adiconar novo produto:                              |"
+    puts "#----------------------------------------------------------------#"
+        novoProduto = gets.chomp
+        produtos << novoProduto 
+        
+        
+        elsif opcao == "2"
+            
+        puts "#----------------------------------------------------------------#"
+        puts "|                      LISTA ATUAL DE PRODUTOS                   |"
+        puts "#----------------------------------------------------------------#"
+        puts "|PRODUTOS |______________________________________________________|"
+        puts produtos
+            
+            
+        elsif opcao == "3" 
+        puts "#----------------------------------------------------------------#"
+        puts "|                       EXCLUÍR PRODUTO                          |"
+        puts "#----------------------------------------------------------------#"
+        puts "|Digite o nome do produto para ser excluindo:                    | "
+        puts "#----------------------------------------------------------------#"
+        excluirProduto = gets.chomp
+        produtos.delete(excluirProduto)
+        
+        
+           
+        elsif opcao == "4" 
+        puts "#----------------------------------------------------------------#"
+        puts "|                       SAINDO DO SISTEMA                        |"
+        puts "#----------------------------------------------------------------#"
+        puts "|Desligando o sistema..                                          | "
+        puts "#----------------------------------------------------------------#"
+        repeticao = 41
+        inicio()
+            
+        else
+        puts "#----------------------------------------------------------------#"
+        puts "|                       OPÇÃO NÃO EXISTE                         |"
+        puts "#----------------------------------------------------------------#"
+        puts "|Desligando o sistema..                                          | "
+        puts "#----------------------------------------------------------------#"
+        repeticao = 41
+        
+           
+    end
+    
+        repeticao = repeticao + 1 
+    end
+    
+end
+ 
+  home()
+  login()
+  
+
