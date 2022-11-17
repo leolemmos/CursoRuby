@@ -1,0 +1,165 @@
+# PROJETO  - SISTEMA DE CALCULO DE FOLHA DE PAGAMENTO
+
+def home
+
+    puts "#----------------------------------------------------------------#"
+    puts "|                                                                |"
+    puts "|                                                                |"
+    puts "|                                                                |"
+    puts "|                $    SERVITEC CONTABILIDADE   $                 |"
+    puts "|                      FINANÇAS EM GERAL                         |"
+    puts "|                                                                |"
+    puts "|                                                                |"
+    puts "|                                                                |"
+    puts "#----------------------------------------------------------------#"
+
+end
+
+
+def login
+
+
+    puts "#----------------------------------------------------------------#"
+    puts "|                      LOGIN  DE ACESSO                          |"
+    puts "#----------------------------------------------------------------#"
+    puts "|Digite seu login:                                               |"
+    puts "#----------------------------------------------------------------#"
+    login = gets.chomp 
+
+    puts "#----------------------------------------------------------------#"
+    puts "| Digite a sua senha:                                            |"
+    puts "#----------------------------------------------------------------#"
+    senha = gets.chomp
+
+
+    if login == "adm" && senha == "123"
+
+        menuCalculo()
+
+    else 
+        puts "Acesso Negado! Login ou senha errado."
+
+    end
+
+
+
+end
+
+
+def menuCalculo
+
+    nome = " "
+    cargo = " "
+    salario = 0.0
+    valeTransporte = 0.0
+    valorExtra = 0.0
+    valorFaltas = 0.0 
+    salBruto = 0.0
+    fgts = 0.0
+    inss = 0.0
+    descontos = 0.0
+    salLiquido = 0.0 
+
+    qtdExtra = 0.0 
+    qtdFaltas = 0.0
+
+
+
+    puts "#----------------------------------------------------------------#"
+    puts "|            $  SISTEMA DE CALCULO DE PAGAMENTO    $             |"
+    puts "#----------------------------------------------------------------#"
+    puts "#----------------------------------------------------------------#"
+    puts "| Digite o nome do funcionário :                                 |"
+    puts "#----------------------------------------------------------------#"
+    nome = gets.chomp
+
+    puts "#----------------------------------------------------------------#"
+    puts "| Digite o cargo  :                                              |"
+    puts "#----------------------------------------------------------------#"
+    cargo = gets.chomp
+
+    puts "#----------------------------------------------------------------#"
+    puts "| Digite o valor do salário R$  :                                |"
+    puts "#----------------------------------------------------------------#"
+    salario = gets.chomp.to_f
+
+    puts "#----------------------------------------------------------------#"
+    puts "| Quantidade de hora extra  :                                    |"
+    puts "#----------------------------------------------------------------#"
+    qtdExtra = gets.chomp.to_f
+
+
+    puts "#----------------------------------------------------------------#"
+    puts "| Quantidade de faltas  :                                    |"
+    puts "#----------------------------------------------------------------#"
+    qtdFaltas = gets.chomp.to_f
+
+
+   # Calculando o vale valeTransporte
+
+   valeTransporte = salario * 0.06
+
+
+   # Calculando hora extra
+
+   valorExtra = qtdExtra * (salario / 220) + ((salario / 220) * 0.50)
+
+   # calculando faltas
+
+   valorFaltas = qtdFaltas *  (salario / 30) 
+
+   # calculando salário salBruto
+
+   salBruto = salario + valorExtra
+
+   # Calculano fgts
+
+   fgts = salBruto * 0.08
+
+   # Calculando Inss
+
+   inss = salBruto * 0.09 
+
+   # Caculando Descontos
+
+   descontos = valeTransporte + valorFaltas
+
+
+   # Calculando salário Líquido
+
+   salLiquido = salBruto - descontos - inss
+
+
+   # Impressão da Folha de Pagamento
+
+   puts 
+
+   puts "#------------------------------------------------------------------#"
+    puts "| SERVITEC                  FOLHA DE PAGAMENTO                   |"
+    puts "#-----------------------------------------------------------------#"
+    puts "#-----------------------------------------------------------------#"
+    puts "| Nome: #{nome}"
+    puts "#-----------------------------------------------------------------#"
+    puts "| Cargo: #{cargo}"  
+    puts "#-----------------------------------------------------------------#"
+    puts "| Descrição                                                       |"
+    puts "#-----------------------------------------------------------------#"
+    puts "  Salário :         "+" #{salario.ceil(2)}                         "
+    puts "  Vale Transporte : "+" #{valeTransporte.ceil(2)}                  "
+    puts "  Hora Extra :      "+" #{valorExtra.ceil(2)}                      "
+    puts "  Faltas :          "+" #{valorFaltas.ceil(2)}                     "
+    puts "  Inss :            "+" #{inss.ceil(2)}                            "
+    puts "#-----------------------------------------------------------------#"
+    puts "  Proventos :       "+" #{salBruto.ceil(2)}                        "
+    puts "  Descontos :       "+" #{descontos.ceil(2)}                       "
+    puts "#-----------------------------------------------------------------#"
+    puts "  Salário Líquido : "+" #{salLiquido.ceil(2)}                      "  
+    puts "#-----------------------------------------------------------------#"
+    puts "  Fgts : "+" #{fgts.ceil(2)}                      "  
+    puts "#-----------------------------------------------------------------#"
+
+
+end
+
+  home()
+  login()
